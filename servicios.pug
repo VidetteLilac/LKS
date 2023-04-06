@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1, initial-scale=1.0" />
+    <title>LKS ASESORES SAS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="servicios.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a class="logo-link" href="index.html"></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html" style="--clr: #22e2ff; --i: 0">INICIO</a></li>
+            <li><a href="nosotros.html">CONÓCENOS</a></li>
+            <li><a href="servicios.pug">SERVICIOS</a></li>
+            <li><a href="contacto.html">CONTÁCTANOS</a></li>
+            <li><a href="https://www.dian.gov.co/Paginas/CalendarioTributario.aspx" target="_blank">CALENDARIO TRIBUTARIO</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1><strong>PORTAFOLIO DE SERVICIOS</strong> </h1>
+      
+        <a href="contacto.html" style="--clr: #ED68A5; --i: 0" class="hero-btn"><span>CONTACTO</span></a>
+        
+      </div>
+   
+  </section>
+
+  <section>
+    - var datas = { 'Outsourcing': 'Revisoría Fiscal, Auditoría Interna, Auditoria Tributaria, Auditoría Externa, De control Interno', 'Aseguramiento': 'Contable, Financiero, Tributario – Impuestos, Nómina, Cumplimiento regulatorio', 'Consultoría': 'IFRS, Implementación de Control Interno, Financiera'}
+
+body
+  div#scene
+    
+    #left-zone
+      ul.list
+        each val, index in datas
+          li.item
+              if index == "Outsourcing"
+                input(type="radio", id='radio_' + val name="basic_carousel" value=val checked)
+              else
+                input(type="radio", id='radio_' + val name="basic_carousel" value=val) 
+              
+              label(for='radio_' + val, class='label_' + index)
+                | #{index}
+              div(class='content content_' + index)
+                span(class='picto')
+                h1
+                  | #{index}
+                p
+                  | #{val}
+    #middle-border
+    #right-zone
+  </section>
+
+  <section class="footer">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nemo
+      ducimus voluptatem,<br />
+      suscipit reiciendis illum ipsa enim.!
+    </p>
+
+    <div class="icon">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-linkedin"></i>
+    </div>
+
+    <p>Hecho por LKS</p>
+  </section>
+
+  <!-----------------------JavaScript Toggle Menu---------------------------------->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-300px";
+    }
+  </script>
+</body>
+</html>
