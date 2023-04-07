@@ -258,7 +258,7 @@
     }
   
     label {
-      color: #460066;
+      color: #c7cacb;
       font-size: 14px;
       font-weight: 300;
       line-height: 22px;
@@ -423,7 +423,7 @@
     /*********FORMULARIO*******/
   
     form {
-      background-color: #73a3b3;
+      background-color: rgba(237, 104, 165, 0.2);
       border-radius: 10px;
       padding: 20px;
       width: 500px;
@@ -570,10 +570,10 @@
     }
     
     #limpiar {
-      --glow-color: rgb(239, 130, 181);
-      --glow-spread-color: rgba(238, 33, 163, 0.781);
+      --glow-color: rgb(226, 89, 89);
+      --glow-spread-color: rgba(255, 123, 123, 0.781);
       --enhanced-glow-color: rgb(182, 175, 71);
-      --btn-color: rgba(228, 51, 163, 0.508);
+      --btn-color: rgba(175, 7, 7, 0.6);
       border: .25em solid var(--glow-color);
       padding: 1em 2em;
       color: var(--glow-color);
@@ -626,18 +626,17 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 5rem;
-      margin: 25px auto;
-      width: 90%;
-      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(15, 44, 173, 0.7)),
+      width: 98%;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(10, 24, 84, 0.7), rgba(255,255,255,0)),
         url(../LKS/assets/dan-dimmock-sNwnjxm8eTY-unsplash.jpg);
       background-position: center;
       background-size: cover;
       border-radius: 10px;
       text-align: center;
       padding: 100px 0;
-      margin-bottom: 5rem;
-  
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      margin: 25px auto;
     }
     
     .cta h1 {
@@ -732,6 +731,7 @@
         url(../LKS/assets/apple-1868496_960_720.jpg);
         background-repeat: no-repeat;
         background-position: center;
+        
     }
     
     .footer-clean h3 {
@@ -739,7 +739,7 @@
       margin-bottom:12px;
       font-weight:bold;
       font-size:16px;
-      color: #329db6;
+      color: #ED68A5;
     }
     
     .footer-clean ul {
