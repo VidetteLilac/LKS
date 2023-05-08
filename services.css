@@ -18,8 +18,8 @@
   }
 
   .logo-link {
-    min-height: 18vh;
-      width: 15%;
+    min-height: 25vh;
+    width: 15%;
       background: rgba( 255, 255, 255, 0.1 );
       background-repeat: no-repeat;
       background-position: center; /*para logo centrado*/
