@@ -8,9 +8,9 @@
   }
   
   .header {
-    min-height: 80vh;
+    min-height: 55vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(10, 24, 84, 0.7), rgba(255,255,255,0)),
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(10, 24, 84, 0.7)),
       url(../LKS/assets/teamwork-3213924_960_720.jpg);
     background-position: center;
     background-size: cover;
@@ -20,7 +20,7 @@
   .logo-link {
     min-height: 25vh;
     width: 15%;
-      background: rgba( 255, 255, 255, 0.1 );
+      background: rgba(255, 255, 255, 0.025);
       background-repeat: no-repeat;
       background-position: center; /*para logo centrado*/
       padding: 20px;
@@ -28,10 +28,11 @@
      display: flex;
       background-size: 100%;
       background-image: url(../LKS/assets/LKS\ cuadrado.png);
-     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     /* box-shadow: 0 8px 32px 0 rgba(185, 188, 237, 0.37); */
      backdrop-filter: blur( 1.5px );
       -webkit-backdrop-filter: blur( 1.5px );
      border-radius: 10px;
+  
   
    }
     
@@ -628,7 +629,7 @@
      min-height: 90vh;
      margin-top: 2rem;
       margin: 25px auto;
-      width: 90%;
+      width: 98%;
       background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(15, 44, 173, 0.7)),
       url(../LKS/assets/dan-dimmock-sNwnjxm8eTY-unsplash.jpg);
       background-position: center;
@@ -785,6 +786,10 @@
         content: "Auditoría";
       }
     
+  a:link { text-decoration: none; }
+  a:visited { text-decoration: none; }
+  a:hover { text-decoration: none; }
+  a:active { text-decoration: none; }
       
       
       

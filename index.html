@@ -17,14 +17,14 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
- 
+  <body>
     <section class="header">
       <nav>
         <a class="logo-link" href="index.html"></a>
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            <li><a href="index.html" style="--clr: #0791AF; --i: 0">INICIO</a></li>
+            <li><a href="index.html" style="--clr: #22e2ff; --i: 0">INICIO</a></li>
             <li><a href="nosotros.html">CONÓCENOS</a></li>
             <li><a href="servicios.html">SERVICIOS</a></li>
             <li><a href="contacto.html">CONTÁCTANOS</a></li>
@@ -32,6 +32,10 @@
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
+        <!-- <div class="menu-btn" onclick="showMenu()"> -->
+          <!-- <div class="center"></div> -->
+        </div>
+        
       </nav>
 
       
@@ -47,17 +51,17 @@
     </section>
 
    
-<body>
+
     <!-------------------Call to action-------------------------------------->
 
     <section class="cta">
       <div class="slideshow-container">
 
-        <div class="mySlides fade">
+        <a href="outsourcing.html"><div class="mySlides fade">
           <div class="numbertext">1 / 4</div>
           <img src="../LKS/assets/Outsourcing.png" style="width:100%">
           <div class="text">Outsourcing</div>
-        </div>
+        </div></a>
         
         <div class="mySlides fade">
           <div class="numbertext">2 / 4</div>
@@ -76,18 +80,20 @@
           <img src="../LKS/assets/Auditoría.png" style="width:100%">
           <div class="text">Auditoría</div>
         </div>
-<!--         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+        <div></div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
         <br>
         
         <div style="text-align:center">
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span> 
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
         </div>
         <a href="servicios.html" style="--clr: #ED68A5; --i: 0" class="hero-btn"><span>Servicios</span></a>
+      </div>
     </section>
 
     <section class="cta">
@@ -125,9 +131,9 @@
       </section>
     </section>
 
-  </section>
+   </section>
 
-  <section class="cta">
+   <section class="cta">
     <h1>CONTÁCTANOS</h1>
     <form class="form">
   
@@ -206,11 +212,11 @@
                   <div class="col-sm-4 col-md-3 item">
                       <h3>Contáctanos</h3>
                       <ul>
-                          <li><a href="#">contactolksasesores@gmail.com</a></li>
+                          <li><a href="mailto:contactolksasesores@gmail.com">contactolksasesores@gmail.com</a></li>
                       </ul>
                   </div>
                   <div class="col-sm-4 col-md-3 item">
-                      <h3>Outsourcing</h3>
+                    <a href="outsourcing.html"><h3>Outsourcing</h3></a>
                       <ul>
                         <li><a>Outsourcing Contable</a></li>
                         <li><a>Estados Financieros Anuales e Intermedios</a></li>
@@ -220,7 +226,7 @@
                       </ul>
                   </div>
                   <div class="col-sm-4 col-md-3 item">
-                      <h3>Revisoría Fiscal</h3>
+                    <a href="revisoria.html"><h3>Revisoría Fiscal</h3></a>
                       <ul>
                         <li><a>Auditoría de Cumplimiento</a></li>
                         <li><a>Auditoría Financiera</a></li>
@@ -229,7 +235,7 @@
                       </ul>
                   </div>
                   <div class="col-sm-4 col-md-3 item">
-                    <h3>Consultoría</h3>
+                    <a href="consultoria.html"><h3>Consultoría</h3></a>
                     <ul>
                       <li><a>Prevención de Riesgos</a></li>
                       <li><a>Control Interno</a></li>
@@ -240,7 +246,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 item">
-                  <h3>Auditoría</h3>
+                  <a href="auditoria.html"><h3>Auditoría</h3></a>
                   <ul>
                     <li><a>Auditoría Legal</a></li>
                     <li><a>Auditoría Interna</a></li>
@@ -259,23 +265,31 @@
     </section>
 <!-----------------------Carousel------------->
 <script>
-  let slideIndex = 0;
-  showSlides();
-  
+var slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
   function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
+                slides[i].style.display = "none";
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 5000); // Change image every 5 seconds
   }
   </script>
